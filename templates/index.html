@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: darkslateblue;
+        }
+        .boxes{
+            display: flex;
+            /* border: 2px solid; */
+            justify-content:space-around;
+            margin-top: 25vh;
+        }
+        .box{
+            box-sizing: border-box;
+            background: rgb(211, 16, 114);
+            color: coral;
+            width: 400px;
+            height: 280px;
+            border: 2px solid;
+            border-radius: 15px;
+            text-align: center; 
+        }
+        .image img{
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;            
+        }
+        a:hover{
+            text-decoration: underline;
+            color:rgb(7, 97, 97);
+        }
+        .anchor{
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box">
+            <div class="image">
+                <img src="../static/img/Beginner.jpg" alt="Yoga Image" width="100%" height="235px">
+            </div>
+            <div class="anchor">
+                <a href="/register">Start Yoga</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="../static/img/BestBooks.jpg" alt="Yoga Image" width="100%" height="235px">
+            </div>
+            <div class="anchor">
+                <a href="#" onclick="alert('This feature is not currently available. \nPlease revisit after some couple of weeks. \nThank You! 💖💖💖')">Other Apps</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

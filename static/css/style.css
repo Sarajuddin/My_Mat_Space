@@ -1,0 +1,367 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+.image{
+    background-image: url('../img/yoga2.1.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.image h1{
+    position: absolute;
+    top: 80px;
+    left: 70px; 
+}
+.image-ul{
+    margin-left: 45px;
+}
+
+.nav-link:hover{
+    border-bottom: 2px solid black;
+} 
+.yoga-types{
+    color: white;
+    background-color: black;
+    list-style-type: none;
+    position: absolute;
+    width: 15%;
+    margin-top: 50px;
+    margin-left: -50px;
+    padding: 5px;
+    /* border: 2px solid white; */
+    border-radius: 10px;
+}
+.yoga-type a{
+    color: white;
+    display: block;
+    padding: 4px 5px;
+}
+.hide{
+    display: none;
+}
+.yoga-type a:hover{
+    color: coral;
+    /* border: 2px solid white; */
+    /* border-radius: 8px; */
+}
+.head-span{
+    color: rgb(247, 97, 42);
+    font-size: 45px;
+    font-weight: 900;
+}
+.section1{
+    width: 100%;
+    background-color: white;
+}
+.diff-levels{
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.levels{
+    width: 28%; 
+    border: 1px solid; 
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+.levels img{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.hr-50{
+    color: white;
+}
+.btn{
+    width: 130px;
+}
+.section2{
+    width: 100%;
+    background-color: #423f3e;
+    padding: 30px 0;
+}
+.footer{
+    width: 100%;
+    background-color: #26201f;
+    padding-top: 40px;
+}
+.footer-link a{
+    color: white;
+    font-size: 16px;
+    line-height: 2rem;
+    margin-left: 35px;
+}
+
+.footer-link a:hover{
+    text-decoration: underline;
+    color: coral;
+}
+.footer-link address{
+    margin-left: 35px;
+}
+.icons{
+    font-size: 20px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 8px;
+}
+.icons:hover{
+    font-size: 23px;
+    color: coral;
+    border: 2px solid coral;
+}
+.social-media{
+    list-style-type: none;
+    display: flex;
+    /* margin-left: -40px; */
+}
+.copyright{
+    color: rgb(243, 81, 22);
+    font-weight: bold;
+}
+#copyright{
+    font-size: 14px;
+}
+
+/* Beginner section starts from here... */
+.beginner-bg {
+    background-image: url('../img/Beginner-bg-2.jpg');
+    background-size:cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.beginner-bg h1{
+    padding-top: 100px;
+    font-size: 60px;
+    color: white;
+    font-style: italic;
+}
+.beginner-sec-1{
+    background-color: #c9b6b3;   
+    padding-top: 80px;
+}
+.beg-box{
+    border: 1px solid;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    padding: 20px;
+    width: 100%;
+    justify-content:space-around;
+
+}
+.inner-1{
+    width: 350px;
+    padding-top: 50px;
+}
+
+.inner-2 img{
+    border-radius: 15px;
+}
+
+/* Intermediate Section starts from here */
+.intermediate-bg {
+    background-image: url('../img/Intermediate-bg.jpg');
+    background-size:cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.intermediate-bg h1{
+    padding-top: 100px;
+    font-size: 60px;
+    color: white;
+    font-style: italic;
+}
+.intermediate-sec-1{
+    background-color: #c9b6b3;
+    padding-top: 80px;
+}
+
+/* Advanced section starts from here... */
+.advanced-bg {
+    background-image: url('../img/Advanced-bg.jpg');
+    background-size:cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+}
+.advanced-bg h1{
+    padding-top: 100px;
+    font-size: 60px;
+    color: white;
+    font-style: italic;
+}
+.advanced-sec-1{
+    background-color: #c9b6b3;
+    padding-top: 80px;
+}
+
+/* Help.html page starts from here... */
+.faqs{
+    margin-top: 20px;
+}
+.hr{
+    width: 10%;
+    border-top: 6px solid rebeccapurple;
+}
+.questions{
+    margin: 30px;
+}
+.arrow{
+    color: rebeccapurple;
+    font-weight: 900;
+}
+.ans{
+    font-weight: bold;
+}
+textarea{
+    width: 80%;
+    padding: 10px;
+}
+.query{
+    margin-bottom: 30px;
+}
+.contact-main{
+    background-image: url('../img/ContactUs.jpg');
+    width: 100%;
+    height: 70vh;
+}
+.contact-head{
+    color: white;
+    padding-top: 160px;
+}
+.con-span{
+    color: coral;
+    font-weight: 900;
+    font-size: 50px;
+}
+.inner{
+    border-radius: 10px;
+}
+.contact{
+    padding: 20px 100px;
+    text-align: center;
+}
+.contact h3{
+    color: darkred;
+    font-weight: bolder;
+}
+.con-icons{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    padding: 15px;
+}
+.con-icon{
+    border: 2px solid rebeccapurple;
+    border-radius: 8px;
+    width: 30%;
+    /* padding: 10px; */
+}
+.con-icon i{
+    font-size: 30px;
+}
+.myform{
+    border: 2px solid rebeccapurple;
+    width: 60%;
+    margin: 1px auto;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+}
+
+/* Yoga-Poses Page Section Starts from here... */
+.poses-box{
+    margin: 100px 150px;
+    font-size: 18px;
+}
+.line-space-1{
+    margin-bottom: 20px;
+}
+.list-span{
+    font-weight: bolder;
+}
+.one-category{
+    margin: 50px 0;
+}
+.count-span{
+    display: inline-block;
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+
+.profile-info-section{
+    display: flex;
+}
+.mytable tr td{
+    padding: 10px;
+}
+.mytable{
+    width: 100%;
+}
+.profile-info{
+    width: 45%;
+    padding: 10px;
+}
+.recommend{
+    border: 2px solid rebeccapurple;
+    border-radius: 10px;
+    margin: 50px 0;
+    display: flex;
+}
+.recommend img{
+    border-radius: 10px;
+}
+.sub-recommend{
+    width: 50%;
+    padding: 20px;
+}
+
+/* About Us Page.... */
+.about-bg{
+    background-image: url('../../static/img/about-bg.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.why-yoga{
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-around;
+}
+.sub-why-yoga{
+    border: 2px solid green;
+    width: 50%;
+    height: 50%;
+}
+.section-3{
+    /* border: 2px solid green; */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.test{
+    /* border: 2px solid red; */
+    padding: 0px;
+    padding-top: 20px;
+    margin: 0px;
+}
+.test ul{
+    padding-left: 20px;
+}

@@ -1,0 +1,75 @@
+{% load static %}
+{% include 'header.html' %}
+
+<div class="container">
+    <div class="pt-4">
+        <h2>User Information</h2>
+    </div>
+
+    <div class="profile-info-section">
+        <div class="profile-info">
+            {% for info in data %}
+            <table border="1" class="mytable">
+                <tr>
+                    <td>Your ID</td><td><b>{{ info.id }}</b></td>
+                </tr>
+                <tr>
+                    <td>Name</td><td><b> {{info.firstname}} {{info.lastname}}</b> </td>
+                </tr>
+                <tr>
+                    <td>Email</td><td><b> {{info.email}} </b></td>
+                </tr>
+                <tr>
+                    <td>Mobile No.</td><td><b> {{info.mobile}}</b> </td>
+                </tr>
+                <tr>
+                    <td>Age</td><td><b> {{info.age}} </b></td>
+                </tr>
+                <tr>
+                    <td>Gender</td><td> <b>{{info.gender}} </b></td>
+                </tr>
+                <tr>
+                    <td>Disease</td><td><b> {{info.disease}} </b></td>
+                </tr>
+            </table>
+            {% endfor %}
+        </div>
+        <div class="profile-info">
+            <a href="#" class="btn btn-outline-primary">Edit Info</a>
+        </div>
+    </div>
+    
+    <div class="m-3">
+        <h2>Recomendations</h2>
+        <p>On the basis of your disease, we recommend you to do these yogas regularly. It will be really helpful for your health and will keep you fit.</p>
+    </div>
+
+    {% for info in data %}
+        {% if info.disease == 'No' %}
+            <h1>No Disease</h1>
+        {% elif info.disease == 'Asthma' %}
+            <h1>Asthma</h1>
+        {% elif info.disease == 'Diabetes' %}
+            <h1>Diabetes</h1>
+        {% elif info.disease == 'Depression' %}
+            <h1>Dipression</h1>
+        {% elif info.disease == 'Liver Problems' %}
+            <h1>Liver Problems</h1>
+        {% elif info.disease == 'Lower Back Pain' %}
+            <h1>Lower Back Pain</h1>
+        {% endif %}
+    <div class="recommend">
+        <div class="sub-recommend">
+            <img src="../../static/img/Advanced.jpg" alt="Image" width="70%">
+        </div>
+        <div class="sub-recommend">
+            <h4>Some Yogas related to disease : <b> {{ info.disease }} </b> are provided for you.</h4>
+            <a href="#" class="btn btn-outline-primary mt-3">Start</a>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+
+
+{% include 'footer.html' %}
