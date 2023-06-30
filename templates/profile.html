@@ -1,4 +1,4 @@
-{% load static %}
+<!-- {% load static %} -->
 {% include 'header.html' %}
 
 <div class="container">
@@ -6,15 +6,15 @@
         <h2>User Information</h2>
     </div>
 
-    <div class="profile-info-section">
-        <div class="profile-info">
+    <div class="">
+        <div class="table-responsive">
             {% for info in data %}
-            <table border="1" class="mytable">
+            <table class="table table-bordered table-striped table-hover">
                 <tr>
                     <td>Your ID</td><td><b>{{ info.id }}</b></td>
                 </tr>
                 <tr>
-                    <td>Name</td><td><b> {{info.firstname}} {{info.lastname}}</b> </td>
+                    <td>Name</td><td><b> {{info.fullname}} </b> </td>
                 </tr>
                 <tr>
                     <td>Email</td><td><b> {{info.email}} </b></td>
@@ -32,43 +32,76 @@
                     <td>Disease</td><td><b> {{info.disease}} </b></td>
                 </tr>
             </table>
-            {% endfor %}
         </div>
-        <div class="profile-info">
-            <a href="#" class="btn btn-outline-primary">Edit Info</a>
+        <div class="">
+            <a href="/update/{{info.id}}" class="btn btn-outline-info">
+                <i class="fa-solid fa-pen"></i> Edit
+            </a>
         </div>
+        {% endfor %}
     </div>
     
-    <div class="m-3">
-        <h2>Recomendations</h2>
+    <div class="my-3">
+        <h3>Recomendations</h3>
         <p>On the basis of your disease, we recommend you to do these yogas regularly. It will be really helpful for your health and will keep you fit.</p>
     </div>
 
-    {% for info in data %}
-        {% if info.disease == 'No' %}
-            <h1>No Disease</h1>
-        {% elif info.disease == 'Asthma' %}
-            <h1>Asthma</h1>
-        {% elif info.disease == 'Diabetes' %}
-            <h1>Diabetes</h1>
-        {% elif info.disease == 'Depression' %}
-            <h1>Dipression</h1>
-        {% elif info.disease == 'Liver Problems' %}
-            <h1>Liver Problems</h1>
-        {% elif info.disease == 'Lower Back Pain' %}
-            <h1>Lower Back Pain</h1>
-        {% endif %}
-    <div class="recommend">
-        <div class="sub-recommend">
-            <img src="../../static/img/Advanced.jpg" alt="Image" width="70%">
-        </div>
-        <div class="sub-recommend">
-            <h4>Some Yogas related to disease : <b> {{ info.disease }} </b> are provided for you.</h4>
-            <a href="#" class="btn btn-outline-primary mt-3">Start</a>
-        </div>
-    </div>
-    {% endfor %}
 
+    <div class="recommend">
+        {% for info in disease %}
+            <div class="sub-recommend">
+                <img src="/{{info.image}}" alt="Image">
+            </div>
+        {% endfor %}    
+        
+        {% for info in data %}
+            <div class="sub-recommend">
+                <h5>Some Yogas related to : <b> {{ info.disease }} </b> are provided for you.</h5>
+                <a href="/home/yoga-for-disease/{{info.disease}}" class="btn btn-outline-info mt-3">Start Yoga</a>
+            </div>
+        {% endfor %}
+            
+    </div>
+    
+
+    <div class="mb-5 table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <tr>
+                <th>Query ID</th>
+                <th>Subject</th>
+                <th>Description</th>
+                <th>Status</th>
+            </tr>
+            
+            {% for q in my_query %}
+                <tr>
+                    <td>{{q.id}}</td>
+                    <td>{{q.subject}}</td>
+                    <td>{{q.message}}</td>
+                    <td><span class="modified"> {{q.status}} </span></td>
+                </tr>
+            {% endfor %}
+                
+        </table>
+    </div>
+    
+    <!-- <div class="mb-5">
+        <div class="query-status row">
+            <div class="col-2">Query ID</div>
+            <div class="col-3">Subject</div>
+            <div class="col-5">Description</div>
+            <div class="col-2">Status</div>
+        </div>
+        {% for q in my_query %}
+        <div class="queries row">
+            <div class="col-2">{{q.id}}</div>
+            <div class="col-3">{{q.subject}}</div>
+            <div class="col-5">{{q.message}}</div>
+            <div class="col-2"> <span class="modified"> {{q.status}} </span> </div>
+        </div>
+        {% endfor %}
+    </div> -->
+    
 </div>
 
 
