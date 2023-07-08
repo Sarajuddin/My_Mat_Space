@@ -10,9 +10,9 @@ def sendEmail(subject, body):
     import smtplib
     import ssl
     from email.message import EmailMessage
-    sender = 'saraju.work@gmail.com'
-    receiver = ['kirtirajput63969@gmail.com', 'saraju8604@gmail.com', 'jayadmalik525@gmail.com', 'vanshikavce19@gmail.com']
-    password = 'tqvcfwnvjkmheytz'
+    sender = 'Sender Email'
+    receiver = ['Receiver Email-1', 'Receiver Email-2', 'Receiver Email-3']
+    password = 'Enter Security Password'
 
     obj = EmailMessage()
     obj['From'] = sender
