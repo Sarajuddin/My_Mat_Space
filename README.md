@@ -1,1 +1,1 @@
-# My_Mat_Space
+# My_Mat_Space (Django Application)
